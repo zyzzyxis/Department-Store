@@ -6,7 +6,12 @@ def index
 end
 
 
+def show
+  @department = Department.find(params[:id])
+  @item = @department.items
 
+  render component: "Department", props: {department: @department, item: @item}
+end
 
 
 

@@ -4,7 +4,7 @@ const Department = () => {
   
   return(
     <div>
-      <h1>should show Department file</h1>
+      <h1>should show single Department</h1>
       
     </div>
   )

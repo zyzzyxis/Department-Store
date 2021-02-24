@@ -4,7 +4,7 @@ const Item = () => {
   
   return(
     <div>
-      <h1>should show item file</h1>
+      <h1>should show item listing</h1>
       
     </div>
   )
