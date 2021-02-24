@@ -1,3 +1,3 @@
 class Item < ApplicationRecord
-  belongs_to :Department
+  belongs_to :department
 end

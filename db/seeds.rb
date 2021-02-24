@@ -13,9 +13,7 @@ Item.destroy_all
 10.times do
   s = Department.create(item: Faker::DcComics.villain, inventory: 4)
   4.times do 
-    
-    s.items.create(quantity: Faker::Number.non_zero_digit, comment: Faker::Kpop.ii_groups)
-   
+    Items.create(department_id: s.id, quantity: Faker::Number.non_zero_digit, comment: Faker::Kpop.ii_groups)
   end
 end
 puts "seeded #{Department.all.size} Departments"
