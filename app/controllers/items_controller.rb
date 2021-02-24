@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @department = Department.find(params[:sub_id])
+    @department = Department.find(params[:department_id])
     @item = @department.items.find(params[:id])
 
     puts @item
