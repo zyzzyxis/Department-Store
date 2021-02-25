@@ -6,15 +6,16 @@ const Items = (props) => {
     return props.items.map( item =>{
       return(
         <div className="item-container">
-        <div classname="item-content">
+        <div className="item-content">
+        <p>Item {item.id}</p>
         <p>Quantity {item.quantity}</p>
         <p>Comment: {item.comment}</p>
         <hr class="itemSeparator"></hr>
         </div>
-        
-        <a href={`/departments/${props.department.id}`}>Return to Department {props.department.id}</a>
-        {/* <a href={`/notes/${note.id}/edit`}>Edit</a>
-        <a href={`/notes/${note.id}`} data-method='delete'>Delete note</a> */}
+
+        <a href={`/departments/${props.department.id}/items/${item.id}`}>Open this item</a>
+        {/* <a href={`/departments/${props.department.id}/item/${note.id}/edit`}>Edit item</a>
+        <a href={`/departments/${props.department.id}/item/${note.id}`} data-method='delete'>Delete item</a> */}
      </div>
       )
 
@@ -24,9 +25,9 @@ const Items = (props) => {
 
   return (
     <div className='main'>
-      <h1>Items</h1>
+      <h1>Items - Department {props.department.id}</h1>
         <div className='nav'>
-          <a href='/departments'>Return to All Departments</a>
+          <a href='/departments'>All Departments</a>
         </div>
 
         {renderItems()}

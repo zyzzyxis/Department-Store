@@ -13,7 +13,7 @@ const Departments = (props) =>{
             <hr className="itemSeparator"></hr>
           </div>
 
-          <a href={`/departments/${department.id}`}>Open Department</a>
+          <a href={`/departments/${department.id}/items`}>Open Department</a>
           
         </div>
       )
@@ -24,9 +24,9 @@ const Departments = (props) =>{
 
   return (
     <div className='main'>
-      <h1>Departments </h1>
+      <h1>All Departments </h1>
       <div className='nav'>
-        <a href='/departments'>Home</a>
+        <a href='/'>Home</a>
       </div>
 
 

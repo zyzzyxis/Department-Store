@@ -4,20 +4,19 @@ const Item = (props) => {
   
   return (
     <div className='main'>
-      <h1>Item</h1>
+      <h1>Item {props.item.id}</h1>
         <div className='nav'>
-           <a href={`/departments/${props.department.id}/items`}>Return to Items</a>
-           <a href={`/departments/${props.department.id}`}>Return to Department {props.department.id}</a>
+          <a href={`/departments`}>All Departments</a>
+          <a href={`/departments/${props.department.id}/items`}>Return to Items in Department {props.department.id}</a>
         </div>
       <div className="item-container">
         <div className="item-content">
           <h1>Quantity: {props.item.quantity}</h1>
           <p>Comment: {props.item.comment}</p>
-          <hr className="itemSeparator"></hr>
         </div>
         
-        {/* <a href={`/items/${props.item.id}/edit`}>Edit</a>
-        <a href={`/items/${props.item.id}`} data-method='delete'>Delete item</a> */}
+        {/* <a href={`/departments/${props.department.id}/item/${note.id}/edit`}>Edit item</a>
+        <a href={`/departments/${props.department.id}/item/${note.id}`} data-method='delete'>Delete item</a> */}
       </div>
     </div>
   )
