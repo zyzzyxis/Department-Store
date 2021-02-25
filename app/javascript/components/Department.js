@@ -13,8 +13,8 @@ const Department = (props) => {
         </div>
         
         <a href={`/departments/${props.department.id}/items/${item.id}`}>Open this item</a>
-        {/* <a href={`/departments/${props.department.id}/item/${note.id}/edit`}>Edit item</a>
-        <a href={`/departments/${props.department.id}/item/${note.id}`} data-method='delete'>Delete item</a> */}
+        
+        {/* <a href={`/departments/${props.department.id}/`} data-method='delete'>Delete item</a> */}
      </div>
       )
 
@@ -26,7 +26,8 @@ const Department = (props) => {
     <div className='main'>
       <h1>Department {props.department.id}</h1>
         <div className='nav'>
-          <a href='/departments'>All Departments</a>          
+          <a href='/departments'>All Departments</a>  
+          <a href={`/departments/${props.department.id}/edit`}>Edit this Department</a>        
         </div>
         
         <p>Items in current department: </p>

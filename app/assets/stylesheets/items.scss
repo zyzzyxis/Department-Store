@@ -28,23 +28,91 @@ body {
   box-shadow: 2px 2px 4px 4px #00000013;
 }
 
-
 hr.itemSeparator {
   border: 1px solid whitesmoke;
 }
 
-/* Add a background color and some padding around the form */
-
 a {
   margin-left: 10px;
   maring-top: 10px;
-  border: 3px solid whitesmoke;
-  color: rgb(35, 35, 39);
-  background-color:whitesmoke;
+  border: 1px solid rgb(60, 67, 77);
+  color: whitesmoke;
+  background-color:rgb(60, 67, 77);
   padding: 8px;
   text-decoration: none;
 }
 
+a:hover{
+  background-color: rgb(72, 111, 167);
+}
+
 .item-content{
   padding-bottom: 10px;
+}
+
+input[type=text]{
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid rgb(35, 35, 39); /* Gray border */
+  background-color: #f1f1f1 ;
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=number]{
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid rgb(35, 35, 39); /* Gray border */
+  background-color: #f1f1f1 ;
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+/* Style the submit button with a specific background color etc */
+button[type=submit] {
+  background-color: rgb(60, 67, 77);
+  color: whitesmoke;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+button[type=submit]:hover {
+  background-color: rgb(72, 111, 167);
+}
+
+/* Style the reset button with a specific background color etc */
+button[type=reset] {
+  background-color: rgb(60, 67, 77);
+  color: whitesmoke;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* When moving the mouse over the reset button, add a darker green color */
+button[type=reset]:hover {
+  background-color: rgb(72, 111, 167);
+}
+
+
+/* Add a background color and some padding around the form */
+.inputForm {
+  color: whitesmoke;
+  background-color: rgb(35, 35, 39);
+  border: 3px solid rgb(60, 67, 77);
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 2px 2px 4px 4px #00000013;
 }
