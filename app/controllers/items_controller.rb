@@ -15,22 +15,29 @@ class ItemsController < ApplicationController
     puts @item
     render component: "Item", props: {item: @item, department: @department}
   end
+  
+  
+  def new
+    @department = Department.find(params[:department_id])
+    render component: "ItemNew", props: {department: @department}
+  end
+
+  def create
+    @department = Department.find(params[:department_id])
+    item = @department.items.new(item_params) 
+    
+    if item.save
+      redirect_to department_items_path
+    else render component: "ItemNew", props: {department: @department}
+    end
+  end
+
 
   def edit
     @department = Department.find(params[:department_id])
     @item = @department.items.find(params[:id])
   
     render component: "ItemEdit", props: {department: @department, item: @item}
-  end
-  
-
-  def create
-    @department = Department.find(params[:department_id])
-    item = Item.new(item_params)
-    if item.save
-      redirect_to departments_path
-    else render component: "ItemNew", props: {department: @department}
-    end
   end
 
   def update
@@ -42,6 +49,7 @@ class ItemsController < ApplicationController
     end
   end
 
+
   def destroy
     # render component: "NoteDelete"
     @department = Department.find(params[:department_id])
@@ -51,10 +59,7 @@ class ItemsController < ApplicationController
     redirect_to department_items_path 
   end
 
-  def new
-    @department = Department.find(params[:department_id])
-    render component: "ItemNew", props: {department: @department}
-  end
+
 
 
   private
