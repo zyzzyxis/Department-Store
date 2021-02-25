@@ -1,5 +1,6 @@
 import React from 'react'
 
+//fill page with the single item from specified department: /departments/[department_id]/items/[item_id]
 const Item = (props) => {
   
   return (
@@ -16,7 +17,7 @@ const Item = (props) => {
         </div>
         
         <a href={`/departments/${props.department.id}/items/${props.item.id}/edit`}>Edit item</a>
-        {/* <a href={`/departments/${props.department.id}/items/${propsitem.id}`} data-method='delete'>Delete item</a> */}
+        <a href={`/departments/${props.department.id}/items/${props.item.id}`} data-method='delete'>Delete item</a>
       </div>
     </div>
   )

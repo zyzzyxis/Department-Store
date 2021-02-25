@@ -8,6 +8,7 @@ const DepartmentEdit = (props) =>{
       <div className="nav">
       <a href={`/departments/${props.department.id}`}>Return to Department</a>
       </div>
+      {/*Form for user to edit current department, fills in fields with current information */}
       <div className="inputForm">
         <form action={`/departments/${props.department.id}`} method='post'>
           <input type="hidden" name="_method" value="put"/>

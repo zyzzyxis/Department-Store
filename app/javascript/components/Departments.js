@@ -3,17 +3,20 @@ import React from 'react'
 const Departments = (props) =>{
 
   const renderDepartments = () => {
+    //map through all departments, generate data for each in page
     return props.departments.map( department => {
       return(
         <div className="item-container">
           <div className="item-content">
-            <p>Department {department.id}</p>
-            <p>Item: {department.item}</p>
+            <h2>Department {department.id}</h2>
+            <p>Item name: {department.item}</p>
             <p>Inventory: {department.inventory}</p>
             <hr className="itemSeparator"></hr>
           </div>
 
           <a href={`/departments/${department.id}/items`}>Open Department</a>
+          <a href={`/departments/${department.id}/edit`}>Edit Department</a>
+          <a href={`/departments/${department.id}/`} data-method='delete'>Delete Department</a>
           
         </div>
       )
@@ -30,7 +33,7 @@ const Departments = (props) =>{
         <a href='/departments/new'>Create Department</a>
       </div>
 
-
+      {/*run renderDepartments method to generate list of departments in page*/}
       {renderDepartments()}
 
 

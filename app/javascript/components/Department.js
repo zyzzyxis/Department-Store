@@ -2,19 +2,22 @@ import React from 'react'
 
 const Department = (props) => {
   
-  const renderItems = () =>{
-    return props.items.map( item =>{
+  //map through all items in specific department, generate data for each in page
+  const renderItems = () => {
+    return props.items.map( item => {
       return(
         <div className="item-container">
         <div className="item-content">
+        <h2>Item {item.id}</h2>
         <p>Quantity {item.quantity}</p>
         <p>Comment: {item.comment}</p>
         <hr class="itemSeparator"></hr>
         </div>
-        
+
         <a href={`/departments/${props.department.id}/items/${item.id}`}>Open this item</a>
+        <a href={`/departments/${props.department.id}/items/${item.id}/edit`}>Edit this item</a>
         
-        {/* <a href={`/departments/${props.department.id}/`} data-method='delete'>Delete item</a> */}
+        
      </div>
       )
 
@@ -27,15 +30,15 @@ const Department = (props) => {
       <h1>Department {props.department.id}</h1>
         <div className='nav'>
           <a href='/departments'>All Departments</a>  
-          <a href={`/departments/${props.department.id}/edit`}>Edit this Department</a>        
+          <a href={`/departments/${props.department.id}/edit`}>Edit this Department</a>  
+          <a href={`/departments/${props.department.id}/`} data-method='delete'>Delete this Department</a>      
         </div>
         
         <p>Items in current department: </p>
 
+        {/*run method to generate list of items for specific department in page */}
         {renderItems()}
         
-        {/* <a href={`/items/${props.item.id}/edit`}>Edit</a>
-        <a href={`/items/${props.item.id}`} data-method='delete'>Delete item</a> */}
     </div>
   )
 }

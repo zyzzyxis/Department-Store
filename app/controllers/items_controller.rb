@@ -32,4 +32,13 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    # render component: "NoteDelete"
+    @department = Department.find(params[:department_id])
+    @item = @department.items.find(params[:id])
+    @item.destroy
+
+    redirect_to department_items_path 
+  end
+
 end
