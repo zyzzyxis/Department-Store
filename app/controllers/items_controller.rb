@@ -4,7 +4,8 @@ class ItemsController < ApplicationController
     @department = Department.find(params[:department_id])
     @items = @department.items
 
-    render component: "Items",  props: {item: @items, department: @department}
+    puts @item
+    render component: "Items",  props: {items: @items, department: @department}
   end
 
   def show

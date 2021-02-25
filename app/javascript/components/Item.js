@@ -3,17 +3,17 @@ import React from 'react'
 const Item = (props) => {
   
   return (
-    <div id='main'>
+    <div className='main'>
       <h1>Item</h1>
-        <div id='nav'>
-          {/* <a href='/items'>Return to Items</a>
-          <a href={`/items/new`}>New item Form</a> */}
+        <div className='nav'>
+           <a href={`/departments/${props.department.id}/items`}>Return to Items</a>
+           <a href={`/departments/${props.department.id}`}>Return to Department {props.department.id}</a>
         </div>
       <div className="item-container">
-        <div id="item-content">
+        <div className="item-content">
           <h1>Quantity: {props.item.quantity}</h1>
           <p>Comment: {props.item.comment}</p>
-          <hr class="itemSeparator"></hr>
+          <hr className="itemSeparator"></hr>
         </div>
         
         {/* <a href={`/items/${props.item.id}/edit`}>Edit</a>

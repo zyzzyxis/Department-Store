@@ -1,16 +1,16 @@
 class DepartmentsController < ApplicationController
 
 def index
-  @department = Department.all
-  render component: "Departments"
+  @departments = Department.all
+  render component: "Departments", props: {departments: @departments}
 end
 
 
 def show
   @department = Department.find(params[:id])
-  @item = @department.items
+  @items = @department.items
 
-  render component: "Department", props: {department: @department, item: @item}
+  render component: "Department", props: {department: @department, items: @items}
 end
 
 

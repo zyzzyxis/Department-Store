@@ -1,3 +1,50 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  margin: 20px;
+  background-color: rgb(35, 35, 39);
+  font-family: 'Roboto', sans-serif;
+}
+
+.main{
+  color: whitesmoke;
+  background-color: rgb(35, 35, 39);
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav{
+  padding-bottom: 20px;
+}
+
+.item-container{
+  color: whitesmoke;
+  background-color: rgb(35, 35, 39);
+  border: 3px solid whitesmoke;
+  padding: 0px 20px 20px 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 2px 2px 4px 4px #00000013;
+}
+
+
+hr.itemSeparator {
+  border: 1px solid whitesmoke;
+}
+
+/* Add a background color and some padding around the form */
+
+a {
+  margin-left: 10px;
+  maring-top: 10px;
+  border: 3px solid whitesmoke;
+  color: rgb(35, 35, 39);
+  background-color:whitesmoke;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.item-content{
+  padding-bottom: 10px;
+}
