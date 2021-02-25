@@ -7,17 +7,16 @@ const Items = (props) => {
     return props.items.map( item =>{
       return(
         <div className="item-container">
-        <div className="item-content">
-        <h2>Item {item.id}</h2>
-        <p>Quantity {item.quantity}</p>
-        <p>Comment: {item.comment}</p>
-        <hr class="itemSeparator"></hr>
-        </div>
+          <div className="item-content">
+            <h2>Item {item.id}</h2>
+            <p>Quantity {item.quantity}</p>
+            <p>Comment: {item.comment}</p>
+            <hr class="itemSeparator"></hr>
+          </div>
 
-        <a href={`/departments/${props.department.id}/items/${item.id}`}>Open this item</a>
-        <a href={`/departments/${props.department.id}/items/${item.id}/edit`}>Edit this item</a>
-        {/* <a href={`/departments/${props.department.id}/item/${note.id}`} data-method='delete'>Delete item</a> */}
-     </div>
+          <a href={`/departments/${props.department.id}/items/${item.id}`}>Open this item</a>
+          <a href={`/departments/${props.department.id}/items/${item.id}/edit`}>Edit this item</a>
+        </div>
       )
 
     })

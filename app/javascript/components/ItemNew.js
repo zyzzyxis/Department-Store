@@ -6,8 +6,7 @@ const ItemNew = (props) =>{
       <h1>Create an Item</h1>
       <p>Department {props.department.id}</p>
       <div className="nav">
-      {/* <a href={`/departments/${props.department.id}/items/${props.item.id}`}>View this Item</a> */}
-      <a href={`/departments/${props.department.id}`}>Return to Department</a>
+        <a href={`/departments/${props.department.id}`}>Return to Department</a>
       </div>
       <div className="inputForm">
         {/*Form for user to create item in current department, fills in fields with current information */}

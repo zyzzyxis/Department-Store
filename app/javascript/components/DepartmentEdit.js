@@ -6,7 +6,7 @@ const DepartmentEdit = (props) =>{
       <h1>Edit This Department</h1>
       <p>Department id: {props.department.id}</p>
       <div className="nav">
-      <a href={`/departments/${props.department.id}`}>Return to Department</a>
+        <a href={`/departments/${props.department.id}`}>Return to Department</a>
       </div>
       {/*Form for user to edit current department, fills in fields with current information */}
       <div className="inputForm">
