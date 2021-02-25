@@ -8,3 +8,4 @@ def CreateDepartment {
   )
 }
 
+export default CreateDepartment

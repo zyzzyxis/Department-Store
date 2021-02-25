@@ -15,8 +15,8 @@ const Item = (props) => {
           <p>Comment: {props.item.comment}</p>
         </div>
         
-        {/* <a href={`/departments/${props.department.id}/item/${note.id}/edit`}>Edit item</a>
-        <a href={`/departments/${props.department.id}/item/${note.id}`} data-method='delete'>Delete item</a> */}
+        <a href={`/departments/${props.department.id}/items/${props.item.id}/edit`}>Edit item</a>
+        {/* <a href={`/departments/${props.department.id}/items/${propsitem.id}`} data-method='delete'>Delete item</a> */}
       </div>
     </div>
   )

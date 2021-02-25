@@ -27,7 +27,8 @@ const Items = (props) => {
     <div className='main'>
       <h1>Items - Department {props.department.id}</h1>
         <div className='nav'>
-          <a href='/departments'>All Departments</a>
+          <a href='/departments'>All Departments</a>  
+          <a href={`/departments/${props.department.id}/edit`}>Edit this Department</a> 
         </div>
 
         {renderItems()}
