@@ -44,7 +44,7 @@ class DepartmentsController < ApplicationController
 
   private
   def department_params
-    params.require(:item, :quantity)
+    params.require(:department).permit(:item, :quantity)
   end
 
 end
