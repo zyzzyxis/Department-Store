@@ -27,6 +27,7 @@ const Departments = (props) =>{
       <h1>All Departments </h1>
       <div className='nav'>
         <a href='/'>Home</a>
+        <a href='/departments/new'>Create Department</a>
       </div>
 
 
@@ -35,6 +36,7 @@ const Departments = (props) =>{
 
     </div>
   )
+
 }
 
 export default Departments
