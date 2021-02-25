@@ -23,6 +23,16 @@ class ItemsController < ApplicationController
     render component: "ItemEdit", props: {department: @department, item: @item}
   end
   
+
+  def create
+    @department = Department.find(params[:department_id])
+    item = Item.new(item_params)
+    if item.save
+      redirect_to departments_path
+    else render component: "ItemNew", props: {department: @department}
+    end
+  end
+
   def update
     item = Item.find(params[:id])
     if item.update(quantity: params[:item][:quantity], comment: params[:item][:comment])
@@ -39,6 +49,17 @@ class ItemsController < ApplicationController
     @item.destroy
 
     redirect_to department_items_path 
+  end
+
+  def new
+    @department = Department.find(params[:department_id])
+    render component: "ItemNew", props: {department: @department}
+  end
+
+
+  private
+  def item_params
+    params.require(:item).permit(:quantity, :comment)
   end
 
 end
