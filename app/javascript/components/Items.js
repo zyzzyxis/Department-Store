@@ -7,7 +7,7 @@ const Items = (props) => {
       return(
         <div className="item-container">
         <div className="item-content">
-        <p>Item {item.id}</p>
+        <h2>Item {item.id}</h2>
         <p>Quantity {item.quantity}</p>
         <p>Comment: {item.comment}</p>
         <hr class="itemSeparator"></hr>

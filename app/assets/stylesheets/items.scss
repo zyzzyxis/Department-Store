@@ -21,6 +21,7 @@ body {
   color: whitesmoke;
   background-color: rgb(35, 35, 39);
   border: 3px solid whitesmoke;
+  border-radius: 10px;
   padding: 0px 20px 20px 20px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -36,6 +37,7 @@ a {
   margin-left: 10px;
   maring-top: 10px;
   border: 1px solid rgb(60, 67, 77);
+  border-radius: 5px;
   color: whitesmoke;
   background-color:rgb(60, 67, 77);
   padding: 8px;
@@ -51,27 +53,25 @@ a:hover{
 }
 
 input[type=text]{
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid rgb(35, 35, 39); /* Gray border */
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid rgb(35, 35, 39); 
   background-color: #f1f1f1 ;
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
 }
 
 input[type=number]{
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid rgb(35, 35, 39); /* Gray border */
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid rgb(35, 35, 39); 
   background-color: #f1f1f1 ;
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
 }
 
 
@@ -82,6 +82,7 @@ button[type=submit] {
   padding: 12px 20px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
@@ -97,6 +98,7 @@ button[type=reset] {
   border: none;
   cursor: pointer;
   margin-left: 10px;
+  border-radius: 5px;
 }
 
 /* When moving the mouse over the reset button, add a darker green color */
@@ -115,4 +117,5 @@ button[type=reset]:hover {
   margin-bottom: 20px;
   font-family: 'Roboto', sans-serif;
   box-shadow: 2px 2px 4px 4px #00000013;
+  border-radius: 5px;
 }
