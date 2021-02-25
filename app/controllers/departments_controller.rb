@@ -29,4 +29,22 @@ class DepartmentsController < ApplicationController
     end
   end
 
+  def new
+    # render json: {departments: Department.all}
+    render component: "DepartmentNew"
+  end
+
+  def create
+    department = Department.new(department_params)
+    if department.save
+      redirect_to departments_path
+    else render component: "DepartmentNew"
+    end
+  end
+
+  private
+  def department_params
+    params.require(:item, :quantity)
+  end
+
 end
