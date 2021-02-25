@@ -30,12 +30,11 @@ const Items = (props) => {
         <div className='nav'>
           <a href='/departments'>All Departments</a>  
           <a href={`/departments/${props.department.id}/edit`}>Edit this Department</a> 
+          <a href={`/departments/${props.department.id}/`} data-method='delete'>Delete this Department</a>
         </div>
 
         {renderItems()}
-        
-        {/* <a href={`/items/${props.item.id}/edit`}>Edit</a>
-        <a href={`/items/${props.item.id}`} data-method='delete'>Delete item</a> */}
+
     </div>
   )
 }

@@ -42,6 +42,14 @@ class DepartmentsController < ApplicationController
     end
   end
 
+  def destroy
+    # render component: "NoteDelete"
+    @department = Department.find(params[:id])
+    @department.destroy
+
+    redirect_to departments_path 
+  end
+
   private
   def department_params
     params.require(:item, :quantity)

@@ -16,6 +16,7 @@ const Departments = (props) =>{
 
           <a href={`/departments/${department.id}/items`}>Open Department</a>
           <a href={`/departments/${department.id}/edit`}>Edit Department</a>
+          <a href={`/departments/${department.id}/`} data-method='delete'>Delete Department</a>
           
         </div>
       )
@@ -32,7 +33,7 @@ const Departments = (props) =>{
         <a href='/departments/new'>Create Department</a>
       </div>
 
-      {/*run rednerDepartments method to generate list of departments in page*/}
+      {/*run renderDepartments method to generate list of departments in page*/}
       {renderDepartments()}
 
 
