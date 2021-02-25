@@ -1,6 +1,6 @@
 import React from 'react'
 
-def DepartmentNew {
+const DepartmentNew = (props) =>{
   return(
     <div className="main">
       {/* <p>Department id: {props.department.id}</p> */}

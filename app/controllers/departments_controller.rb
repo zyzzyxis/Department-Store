@@ -30,14 +30,15 @@ class DepartmentsController < ApplicationController
   end
 
   def new
-    render component: "DepartmentNew", props: {department: @department, items: @items}
+    # render json: {departments: Department.all}
+    render component: "DepartmentNew"
   end
 
   def create
     department = Department.new(department_params)
     if department.save
       redirect_to departments_path
-    else render component: "DepartmentNew", props: {department: @department, items: @items}
+    else render component: "DepartmentNew"
     end
   end
 
