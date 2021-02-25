@@ -29,4 +29,12 @@ class DepartmentsController < ApplicationController
     end
   end
 
+  def create
+    department = Department.new
+    if department.create(item: params[:department][:item], inventory: params[:department][:inventory])
+      redirect_to departments_path
+    else render component: "CreateDepartment", props: {department: @department, items: @items}
+  end
+
+
 end
