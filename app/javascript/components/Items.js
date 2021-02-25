@@ -3,6 +3,7 @@ import React from 'react'
 const Items = (props) => {
   
   const renderItems = () =>{
+    //map through all items in specific department, generate data for each in page
     return props.items.map( item =>{
       return(
         <div className="item-container">
@@ -14,8 +15,8 @@ const Items = (props) => {
         </div>
 
         <a href={`/departments/${props.department.id}/items/${item.id}`}>Open this item</a>
-        {/* <a href={`/departments/${props.department.id}/item/${note.id}/edit`}>Edit item</a>
-        <a href={`/departments/${props.department.id}/item/${note.id}`} data-method='delete'>Delete item</a> */}
+        <a href={`/departments/${props.department.id}/items/${item.id}/edit`}>Edit this item</a>
+        {/* <a href={`/departments/${props.department.id}/item/${note.id}`} data-method='delete'>Delete item</a> */}
      </div>
       )
 

@@ -1,5 +1,6 @@
 import React from 'react'
 
+//fill page with the single item from specified department: /departments/[department_id]/items/[item_id]
 const Item = (props) => {
   
   return (
